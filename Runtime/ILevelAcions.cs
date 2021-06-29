@@ -2,7 +2,7 @@ using System;
 
 namespace LevelSystem
 {
-    internal interface ILevelActions
+    public interface ILevelActions
     {
         event Action<int> LevelLoaded;
         event Action LevelCompleted;

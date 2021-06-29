@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 namespace LevelSystem
 {
-    internal static class LevelProcessor
+    public static class LevelProcessor
     {
         private static readonly LevelSystemData _levelSystemData;
         private static readonly LevelActions _levelActions;
