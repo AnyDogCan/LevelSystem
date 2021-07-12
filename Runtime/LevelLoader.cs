@@ -27,6 +27,8 @@ namespace LevelSystem.Loading
 
         public void LoadNextLevel(Action callback) => LoadLevel(LevelSaver.GetCurrentLevelIndex() + 1, callback);
         
+        public void LoadPreviousLevel(Action callback) => LoadLevel(LevelSaver.GetCurrentLevelIndex() - 1, callback);
+
         private void Load(string scene, Action callback)
         {
             SceneManager.LoadScene(scene);

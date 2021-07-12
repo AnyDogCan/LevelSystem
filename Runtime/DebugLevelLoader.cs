@@ -16,5 +16,7 @@ namespace LevelSystem.Loading
         }
 
         public void LoadNextLevel(Action callback) => throw new NotImplementedException();
+        
+        public void LoadPreviousLevel(Action callback) => throw new NotImplementedException();
     }
 }
