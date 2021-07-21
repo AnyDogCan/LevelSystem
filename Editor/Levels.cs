@@ -8,9 +8,11 @@ namespace LevelSystem.Editor
     public sealed class Levels : ScriptableObject
     {
         [SerializeField] private SceneAsset _mainScene;
+        [SerializeField] private List<SceneAsset> _tutorialScenes;
         [SerializeField] private List<SceneAsset> _scenes;
 
         public SceneAsset MainScene => _mainScene;
+        public List<SceneAsset> TutorialScenes => _tutorialScenes;
         public List<SceneAsset> Scenes => _scenes;
     }
 }

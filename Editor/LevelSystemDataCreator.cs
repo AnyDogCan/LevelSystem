@@ -67,6 +67,7 @@ namespace LevelSystem.Editor
             Levels levels = Resources.Load<Levels>(nameof(Levels));
 
             _levelSystemData.SceneNames = levels.Scenes.Select(sceneAsset => sceneAsset.name).ToArray();
+            _levelSystemData.TutorialSceneNames = levels.TutorialScenes.Select(sceneAsset => sceneAsset.name).ToArray();
             _levelSystemData.MainSceneName = levels.MainScene.name;
         }
         

@@ -10,6 +10,7 @@ namespace LevelSystem.Data
     public sealed class LevelSystemData : ScriptableObject
     {
         [SerializeField, HideInInspector] private string _pathToLevelSettings;
+        [SerializeField, HideInInspector] private string[] _tutorialSceneNames;
         [SerializeField, HideInInspector] private string[] _sceneNames;
         [SerializeField, HideInInspector] private string _mainSceneName;
 
@@ -17,6 +18,12 @@ namespace LevelSystem.Data
         {
             get => _pathToLevelSettings;
             set => _pathToLevelSettings = value;
+        }
+        
+        public string[] TutorialSceneNames
+        {
+            get => _tutorialSceneNames;
+            set => _tutorialSceneNames = value;
         }
 
         public string[] SceneNames
@@ -30,9 +37,16 @@ namespace LevelSystem.Data
             get => _mainSceneName;
             set => _mainSceneName = value;
         }
-        
+
         public string GetSceneByID(int index, LevelsLoopingType loopingType = LevelsLoopingType.None)
         {
+            if (index < _tutorialSceneNames.Length)
+            {
+                return _tutorialSceneNames[index];
+            }
+
+            index -= _tutorialSceneNames.Length;
+
             int selectedIndex = NormalizeIndexByLoopingType(index, loopingType);
             
             if (selectedIndex >= _sceneNames.Length || _sceneNames[selectedIndex] == null)
