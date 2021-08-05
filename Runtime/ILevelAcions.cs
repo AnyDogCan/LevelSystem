@@ -7,5 +7,6 @@ namespace LevelSystem
         event Action<int> LevelLoaded;
         event Action LevelCompleted;
         event Action NextLevelRequested;
+        event Action LevelFailed;
     }
 }

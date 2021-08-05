@@ -37,6 +37,8 @@ namespace LevelSystem
         public static void LoadPreviousLevel() => _loader.LoadPreviousLevel(OnSceneLoaded);
 
         public static void CompleteLevel() => _levelActions.OnLevelCompleted();
+        
+        public static void OnLevelFailed() => _levelActions.OnLevelFailed();
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void CheckFirstScene()

@@ -21,6 +21,7 @@ ILevelActions служит для отслеживания событий про
         Action<int> LevelLoaded - уровень загружен
         Action LevelCompleted - уровень пройден
         Action NextLevelRequested - запрошен следующий уровень
+        Action LevelFailed - уровень провален
 
 
 Сразу же будет загружена сцена согласно твоему прогрессу (не важно с какой сцены стартовать)
